@@ -18,6 +18,7 @@ public class TheUserCanLoginWithUsernameAndPasswordWithANewRepoRetest2 {
         
         SaucedemoComPageObject saucedemoPage = new SaucedemoComPageObject(driver);
         saucedemoPage.enterUsername("standard_user");
+        saucedemoPage.enterPassword("secret_sauce");
     }
     
     @AfterTest
