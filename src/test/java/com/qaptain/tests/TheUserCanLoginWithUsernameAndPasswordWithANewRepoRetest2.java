@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
+import com.qaptain.pageobjects.SaucedemoComPageObject;
+
 public class TheUserCanLoginWithUsernameAndPasswordWithANewRepoRetest2 {
 
     protected WebDriver driver = new ChromeDriver();
@@ -13,6 +15,9 @@ public class TheUserCanLoginWithUsernameAndPasswordWithANewRepoRetest2 {
     @Test
     public void TheUserCanLoginWithUsernameAndPasswordWithANewRepoRetest2_test(){
         driver.get("https://www.saucedemo.com/");
+        
+        SaucedemoComPageObject saucedemoPage = new SaucedemoComPageObject(driver);
+        saucedemoPage.enterUsername("standard_user");
     }
     
     @AfterTest
