@@ -13,6 +13,9 @@ public class SaucedemoComPageObject {
     @FindBy(xpath = "//*[@id='user-name']")
     protected WebElement userNameField;
 
+    @FindBy(xpath = "//*[@id='password']")
+    protected WebElement passwordField;
+
     public SaucedemoComPageObject(WebDriver pDriver) {
         driver = pDriver;
         PageFactory.initElements(driver, this);
@@ -26,5 +29,14 @@ public class SaucedemoComPageObject {
      */
     public void fillUserName(String value) {
         userNameField.sendKeys(value);
+    }
+
+    /**
+     * Enters the specified password into the password field.
+     *
+     * @param value the password to enter (e.g., "secret_sauce")
+     */
+    public void enterPassword(String value) {
+        passwordField.sendKeys(value);
     }
 }
